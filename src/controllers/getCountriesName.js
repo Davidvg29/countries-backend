@@ -8,7 +8,7 @@ const getCountriesName = async (req, res)=>{
         if (filter.length>0) {
             res.status(200).json(filter)
         } else {
-            res.status(200).json("Pais inexistente")
+            res.status(200).json({error:"Pais inexistente"})
         }
     } catch (error) {
         res.status(500).json({error: "error en el servidor"})
